@@ -2,8 +2,16 @@
     "name": "vite_react_metes",
     "private": true,
     "version": "0.0.0",
+    "scripts": {
+        "f": "npm run --prefix frontend",
+        "b": "npm run --prefix backend",
+        "types": "concurrently \"npm run b types\" \"npm run f types\""
+    },
     "workspaces": [
         "frontend",
         "backend"
-    ]
+    ],
+    "devDependencies": {
+        "concurrently": "^9.1.2"
+    }
 }
